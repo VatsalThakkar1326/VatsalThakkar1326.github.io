@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vatsal Thakkar - Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <style>
+    /* Dark mode base styling */
+    :root {
+      --bg-color: #121212;
+      --sidebar-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --accent-color: #007bff;
+      --card-color: #2a2a2a;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    /* Scroll-based reveal styling */
+    .reveal {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      background: var(--sidebar-color);
+      padding-top: 30px;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar p {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar .nav-link {
+      color: #ccc;
+      margin: 5px 15px;
+      border-radius: 4px;
+    }
+    .sidebar .nav-link:hover {
+      background-color: var(--accent-color);
+      color: #fff !important;
+    }
+
+    /* Main content area */
+    .content {
+      margin-left: 250px;
+      padding: 30px;
+    }
+
+    /* Section titles */
+    .section-title {
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      margin-bottom: 25px;
+      padding-bottom: 5px;
+      font-weight: 600;
+    }
+
+    /* Cards in dark mode */
+    .card {
+      background-color: var(--card-color);
+      border: none;
+    }
+    .card .card-title {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+    .card .card-text {
+      color: #ffffff;
+    }
+
+    /* Project images styling */
+    .project-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+
+    /* Custom background container for emphasis */
+    .bg-custom {
+      background-color: #1a1a1a;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <img src="profile.jpg" alt="Profile" class="profile-img" />
+    <h3>Vatsal Thakkar</h3>
+    <p>AI/ML Researcher & Eng. Leader</p>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="#summary"><i class="bi bi-person-circle me-2"></i>Summary</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills"><i class="bi bi-gear me-2"></i>Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experience"><i class="bi bi-briefcase me-2"></i>Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects"><i class="bi bi-kanban me-2"></i>Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education"><i class="bi bi-mortarboard me-2"></i>Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact"><i class="bi bi-telephone me-2"></i>Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Summary -->
+    <section id="summary" class="mb-5 reveal">
+      <h2 class="section-title">Summary</h2>
+      <div class="bg-custom">
+        <p class="mb-2">
+          AI/ML Researcher, Product Manager, and Engineering Leader with 5+ years of software engineering and 2+ years in leadership roles.
+        </p>
+        <p class="mb-2">
+          Skilled in delivering end-to-end AI/ML solutions using Agile methodologies, designing & deploying scalable models on GCP Vertex AI, and collaborating with cross-functional teams to generate business value.
+        </p>
+        <p class="mb-0">
+          <strong>Currently:</strong> Working on 10+ AI/ML initiatives. <br>
+          <strong>Track Record:</strong> Successfully delivered 150+ projects.
+        </p>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="mb-5 reveal">
+        <h2 class="section-title">Key Technical Projects</h2> <h10>Last Updates: Aug 2024 </h10>
+        <div class="row g-4 mb-3">
+          <!-- Project 1 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="Deep-learning.png" class="project-img card-img-top" alt="ML from Scratch">
+              <div class="card-body">
+                <h5 class="card-title">Building Complex ML Models from Scratch</h5>
+                <p class="card-text">Developed custom deep neural networks for image classification, sentiment analysis, and time-series forecasting. Explored fine tuning & transfer learning for faster experimentation.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="AI-transformer-models-language.webp" class="project-img card-img-top" alt="Novel Neural Network">
+              <div class="card-body">
+                <h5 class="card-title">Novel Neural Network Research</h5>
+                <p class="card-text">Investigated next-generation architectures (transformers, attention) to enhance accuracy and efficiency for enterprise-grade solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mb-3">
+          <!-- Project 3 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="llm.png" class="project-img card-img-top" alt="AI-Driven Privacy Risk">
+              <div class="card-body">
+                <h5 class="card-title">AI-Driven Privacy Risk Assessment Platform</h5>
+                <p class="card-text">Architected an Azure-hosted solution using LLMs and Flask APIs for real-time privacy risk scoring, cutting compliance review time by 95%.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="auto.jpg" class="project-img card-img-top" alt="Autonomous Vehicle">
+              <div class="card-body">
+                <h5 class="card-title">Autonomous Vehicle Perception & Control</h5>
+                <p class="card-text">Implemented advanced computer vision and deep learning solutions for real-time object detection, achieving major latency reduction and improved accuracy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mb-3">
+          <!-- Project 5 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="langchain.png" class="project-img card-img-top" alt="Conversational AI">
+              <div class="card-body">
+                <h5 class="card-title">Conversational AI & Process Automation</h5>
+                <p class="card-text">Developed NLP-to-SQL solutions using LangChain to automate 85% of customer service queries, building scalable, reusable AI modules.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="gov frame.jpg" class="project-img card-img-top" alt="AI Governance & Compliance">
+              <div class="card-body">
+                <h5 class="card-title">AI Governance & Compliance Framework</h5>
+                <p class="card-text">Built a comprehensive governance system embedding ethical AI principles, automated monitoring, and risk mitigation for enterprise-level deployments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Project 7 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="mathematics.png" class="project-img card-img-top" alt="Time-Series Forecasting">
+              <div class="card-body">
+                <h5 class="card-title">Time-Series Forecasting for Financial Markets</h5>
+                <p class="card-text">Developed and deployed LSTM- and transformer-based models for stock market and demand forecasting, achieving significant improvements in predictive accuracy.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project 8 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img src="LLM_Summarization.webp" class="project-img card-img-top" alt="NLP Document Summarization">
+              <div class="card-body">
+                <h5 class="card-title">NLP-Based Document Summarization</h5>
+                <p class="card-text">Implemented transformer-based summarizers to compress long corporate documents into concise executive summaries, boosting productivity and decision-making.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    <!-- Skills -->
+    <section id="skills" class="mb-5 reveal">
+      <h2 class="section-title">Skills</h2>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <h5 class="text-warning">AI/ML & Technology</h5>
+          <ul>
+            <li>Machine Learning, Data Science, LLMs & RAG, MLOps, Computer Vision, NLP</li>
+            <li>Deep Learning, Prompt Engineering, Transfer Learning, Fine Tuning</li>
+            <li>Novel Neural Network Research & Implementation</li>
+          </ul>
+        </div>
+        <div class="col-md-6 mb-3">
+          <h5 class="text-warning">Programming & Tools</h5>
+          <ul>
+            <li>Python, C++, C#, .NET, JavaScript, SQL</li>
+            <li>Azure, GCP (Vertex AI), Anthropic, Hugging Face</li>
+            <li>TensorFlow, PyTorch, Keras, OpenCV, YOLO</li>
+            <li>Docker, CI/CD, AI Governance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="text-warning">Cloud & DevOps</h5>
+          <ul>
+            <li>GCP (Vertex AI), Azure Databricks, AWS</li>
+            <li>Containerization (Docker), Automated Deployments</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-warning">Project Management & Collaboration</h5>
+          <ul>
+            <li>Agile Methodologies, End-to-end SDLC</li>
+            <li>KPI Tracking, Strategic Planning, Stakeholder Communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mb-5 reveal">
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="mb-4">
+        <h5 class="fw-bold text-primary">AI Research Associate <span class="text-muted">(Nov 2024 – Current)</span></h5>
+        <p class="mb-1"><strong>Durham College, Oshawa, ON, Canada</strong></p>
+        <ul>
+          <li>Led AI-centric R&D initiatives with end-to-end ML pipeline delivery using advanced AI/ML techniques.</li>
+          <li>Collaborated with cross-functional teams to design and deploy scalable ML models and develop reusable code.</li>
+          <li>Defined and monitored KPIs, authored comprehensive documentation for stakeholders.</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h5 class="fw-bold text-primary">AI/ML Engineer <span class="text-muted">(Sep 2024 – Jan 2025)</span></h5>
+        <p class="mb-1"><strong>INQ Consulting, Toronto, Canada</strong></p>
+        <ul>
+          <li>Engineered production-grade ML models on Azure Databricks.</li>
+          <li>Integrated robust APIs with privacy risk assessment tools.</li>
+          <li>Implemented Agile practices and CI/CD pipelines to streamline deployments.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="fw-bold text-primary">Project Lead (AI/ML) <span class="text-muted">(May 2020 – Dec 2023)</span></h5>
+        <p class="mb-1"><strong>F5 Systems, India</strong></p>
+        <ul>
+          <li>Oversaw AI/ML architecture, managing full SDLC with agile execution.</li>
+          <li>Led cross-functional teams in delivering scalable, optimized AI solutions.</li>
+          <li>Integrated deep learning and NLP systems to improve operational efficiency.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="mb-5 reveal">
+      <h2 class="section-title">Education</h2>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <h5 class="fw-bold text-primary">Durham College, Oshawa, ON</h5>
+          <p>Post-Graduation in Artificial Intelligence Analysis, Design, and Implementation (Computer Science) & Project Management</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <h5 class="fw-bold text-primary">M.S University, Baroda, IN</h5>
+          <p>Bachelor of Engineering (Specialization in Engineering Software Development)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mb-5 reveal">
+      <h2 class="section-title">Contact</h2>
+      <div class="bg-custom">
+        <p class="mb-1"><i class="bi bi-envelope"></i> <strong>Email:</strong> thakkarvatsal13@gmail.com</p>
+        <p class="mb-1"><i class="bi bi-telephone"></i> <strong>Phone:</strong> 647-897-2937</p>
+        <p class="mb-1"><i class="bi bi-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vatsal-thakkar13" target="_blank" style="color: var(--accent-color);">linkedin.com/in/vatsal-thakkar13</a></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- IntersectionObserver for reveal animation -->
+  <script>
+    // This observer toggles 'active' class when elements are in/out of view
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal');
+      const options = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            // Remove the active class to animate out when scrolling up
+            entry.target.classList.remove('active');
+          }
+        });
+      }, options);
+
+      revealElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
